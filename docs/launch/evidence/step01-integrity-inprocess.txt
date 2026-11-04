@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: settings batches roll back all fields when a sensitive update lacks confirmation
+ok 1 - settings batches roll back all fields when a sensitive update lacks confirmation
+  ---
+  duration_ms: 21955.071235
+  type: 'test'
+  ...
+# Subtest: owner-approved deletion removes identity, retains financial/history relationships and revokes access as configured
+ok 2 - owner-approved deletion removes identity, retains financial/history relationships and revokes access as configured
+  ---
+  duration_ms: 3127.486461
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 25188.297009

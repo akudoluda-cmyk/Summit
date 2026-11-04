@@ -1,0 +1,24 @@
+
+> 1751-platform@3.0.0 check
+> node --check backend/api.js && node --check backend/admin.js && node --check backend/uploads.js && node --check backend/render.js && node --check admin/admin.js && node --check stage3.js && npm test && npm run build
+
+
+> 1751-platform@3.0.0 test
+> node --test tests/*.test.mjs
+
+✔ tests/admin-integrity.test.mjs (53850.017202ms)
+✔ tests/admin.test.mjs (20828.699773ms)
+✔ tests/platform.test.mjs (56219.985082ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 56357.569897
+
+> 1751-platform@3.0.0 build
+> node scripts/build.mjs
+
+Built dist/ with allowlisted static files only.

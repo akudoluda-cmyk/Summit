@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: admin access rejects guests, ordinary users and AAL1 staff; genuine TOTP step-up sets protected cookies
+ok 1 - admin access rejects guests, ordinary users and AAL1 staff; genuine TOTP step-up sets protected cookies
+  ---
+  duration_ms: 7992.045693
+  type: 'test'
+  ...
+# Subtest: RBAC prevents editor financial/role access and direct authenticated RPC access
+ok 2 - RBAC prevents editor financial/role access and direct authenticated RPC access
+  ---
+  duration_ms: 97.549443
+  type: 'test'
+  ...
+# Subtest: product create/edit/feature/publish/archive keeps historical purchase prices and paid downloads
+ok 3 - product create/edit/feature/publish/archive keeps historical purchase prices and paid downloads
+  ---
+  duration_ms: 489.235303
+  type: 'test'
+  ...
+# Subtest: financial records cannot be manually marked paid; verified reconciliation is audited and refunds remain pending
+ok 4 - financial records cannot be manually marked paid; verified reconciliation is audited and refunds remain pending
+  ---
+  duration_ms: 130.467331
+  type: 'test'
+  ...
+# Subtest: article draft, preview, publication, revision and archiving preserve visibility boundaries
+ok 5 - article draft, preview, publication, revision and archiving preserve visibility boundaries
+  ---
+  duration_ms: 164.353767
+  type: 'test'
+  ...
+# Subtest: event schedule edits notify registrants, protect capacity and cancel without losing records
+ok 6 - event schedule edits notify registrants, protect capacity and cancel without losing records
+  ---
+  duration_ms: 263.761706
+  type: 'test'
+  ...
+# Subtest: moderation hides direct detail responses and restrictions block member write/read access
+ok 7 - moderation hides direct detail responses and restrictions block member write/read access
+  ---
+  duration_ms: 183.642932
+  type: 'test'
+  ...
+# Subtest: inquiry workflow assignment and notes are private; subscriber administration cannot resubscribe users
+ok 8 - inquiry workflow assignment and notes are private; subscriber administration cannot resubscribe users
+  ---
+  duration_ms: 163.683532
+  type: 'test'
+  ...
+# Subtest: settings are validated, private credentials rejected, featured records use approved database content and legal approval is explicit
+ok 9 - settings are validated, private credentials rejected, featured records use approved database content and legal approval is explicit
+  ---
+  duration_ms: 202.553572
+  type: 'test'
+  ...
+# Subtest: new document assets require scanning; executable/SVG/oversized files and scanner mismatches fail closed
+ok 10 - new document assets require scanning; executable/SVG/oversized files and scanner mismatches fail closed
+  ---
+  duration_ms: 63.903125
+  type: 'test'
+  ...
+# Subtest: analytics uses verified payments/refunds and makes unmeasured conversion explicit
+ok 11 - analytics uses verified payments/refunds and makes unmeasured conversion explicit
+  ---
+  duration_ms: 177.292505
+  type: 'test'
+  ...
+# Subtest: audit logs cannot be edited/deleted and CSV exports escape spreadsheet formulas
+ok 12 - audit logs cannot be edited/deleted and CSV exports escape spreadsheet formulas
+  ---
+  duration_ms: 17.550552
+  type: 'test'
+  ...
+# Subtest: SSR metadata, canonical routes, sitemap visibility and private noindex headers use published data
+ok 13 - SSR metadata, canonical routes, sitemap visibility and private noindex headers use published data
+  ---
+  duration_ms: 62.471046
+  type: 'test'
+  ...
+# Subtest: encrypted backups authenticate payloads, detect tampering, validate file digests and prohibit production/source restores
+ok 14 - encrypted backups authenticate payloads, detect tampering, validate file digests and prohibit production/source restores
+  ---
+  duration_ms: 71.282333
+  type: 'test'
+  ...
+# Subtest: role changes revoke existing sessions, suspended users cannot access private flows, and the last super administrator is protected
+ok 15 - role changes revoke existing sessions, suspended users cannot access private flows, and the last super administrator is protected
+  ---
+  duration_ms: 109.151884
+  type: 'test'
+  ...
+# Subtest: maintenance pauses new transactions while preserving read/history and deletion stays blocked without owner retention approval
+ok 16 - maintenance pauses new transactions while preserving read/history and deletion stays blocked without owner retention approval
+  ---
+  duration_ms: 65.713438
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 10417.258228

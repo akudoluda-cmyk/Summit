@@ -1,0 +1,169 @@
+TAP version 13
+# Subtest: public catalog, search, details, filtering, sorting and draft exclusion
+ok 1 - public catalog, search, details, filtering, sorting and draft exclusion
+  ---
+  duration_ms: 8420.945342
+  type: 'test'
+  ...
+# Subtest: RLS enabled everywhere; clients cannot directly read private tables or invoke business RPC
+ok 2 - RLS enabled everywhere; clients cannot directly read private tables or invoke business RPC
+  ---
+  duration_ms: 61.257193
+  type: 'test'
+  ...
+# Subtest: request boundaries reject cross-origin, wrong content type, oversized bodies and invalid IDs
+ok 3 - request boundaries reject cross-origin, wrong content type, oversized bodies and invalid IDs
+  ---
+  duration_ms: 93.582904
+  type: 'test'
+  ...
+# Subtest: account lifecycle: signup, verification requirement, verify, login, persistent cookies, profile, logout, recover, password, deletion request
+ok 4 - account lifecycle: signup, verification requirement, verify, login, persistent cookies, profile, logout, recover, password, deletion request
+  ---
+  duration_ms: 313.065312
+  type: 'test'
+  ...
+# Subtest: expired access sessions refresh securely and invalid sessions lose authorization
+ok 5 - expired access sessions refresh securely and invalid sessions lose authorization
+  ---
+  duration_ms: 39.009214
+  type: 'test'
+  ...
+# Subtest: account carts persist and cannot be read by another identity
+ok 6 - account carts persist and cannot be read by another identity
+  ---
+  duration_ms: 143.159862
+  type: 'test'
+  ...
+# Subtest: checkout ignores browser prices and totals; repeat requests create one order
+ok 7 - checkout ignores browser prices and totals; repeat requests create one order
+  ---
+  duration_ms: 178.118913
+  type: 'test'
+  ...
+# Subtest: unavailable items roll back all order inserts; digital quantity and disabled promotions rejected
+ok 8 - unavailable items roll back all order inserts; digital quantity and disabled promotions rejected
+  ---
+  duration_ms: 186.190931
+  type: 'test'
+  ...
+# Subtest: independent verification rejects amount/currency/live mismatch and fulfills once
+ok 9 - independent verification rejects amount/currency/live mismatch and fulfills once
+  ---
+  duration_ms: 319.90959
+  type: 'test'
+  ...
+# Subtest: webhook signature validation, replay and authoritative provider verification
+ok 10 - webhook signature validation, replay and authoritative provider verification
+  ---
+  duration_ms: 87.134789
+  type: 'test'
+  ...
+# Subtest: declined/pending/cancelled payment does not grant access; retry keeps the reference
+ok 11 - declined/pending/cancelled payment does not grant access; retry keeps the reference
+  ---
+  duration_ms: 89.904623
+  type: 'test'
+  ...
+{"event":"request_failed","request_id":"f688c6ae-506e-477c-ae63-da2d48cb4734","code":"sandbox_configuration_required","route":"/api/checkout"}
+# Subtest: live payment credentials are always rejected
+ok 12 - live payment credentials are always rejected
+  ---
+  duration_ms: 16.303139
+  type: 'test'
+  ...
+# Subtest: free event registration, duplicate prevention, capacity/waitlist, meeting privacy and promotion on cancellation
+ok 13 - free event registration, duplicate prevention, capacity/waitlist, meeting privacy and promotion on cancellation
+  ---
+  duration_ms: 229.595668
+  type: 'test'
+  ...
+# Subtest: paid event reserves capacity, only confirms after payment, and appears in dashboard
+ok 14 - paid event reserves capacity, only confirms after payment, and appears in dashboard
+  ---
+  duration_ms: 214.700077
+  type: 'test'
+  ...
+# Subtest: community join/post/comment/edit/report/moderation; members-only reads and author boundaries
+ok 15 - community join/post/comment/edit/report/moderation; members-only reads and author boundaries
+  ---
+  duration_ms: 318.080372
+  type: 'test'
+  ...
+# Subtest: inquiry persistence, idempotency, consent, spam trap and private notification outbox
+ok 16 - inquiry persistence, idempotency, consent, spam trap and private notification outbox
+  ---
+  duration_ms: 121.042782
+  type: 'test'
+  ...
+# Subtest: newsletter double opt-in, duplicate prevention, unsubscribe persistence and expired links
+ok 17 - newsletter double opt-in, duplicate prevention, unsubscribe persistence and expired links
+  ---
+  duration_ms: 111.627941
+  type: 'test'
+  ...
+# Subtest: protected email jobs and retries; template output escapes user input
+ok 18 - protected email jobs and retries; template output escapes user input
+  ---
+  duration_ms: 2.790923
+  type: 'test'
+  ...
+# Subtest: database rate limiting rejects excess requests and does not use browser state
+ok 19 - database rate limiting rejects excess requests and does not use browser state
+  ---
+  duration_ms: 10.79176
+  type: 'test'
+  ...
+# Subtest: public browsing does not consume the stricter authentication-mutation rate bucket
+ok 20 - public browsing does not consume the stricter authentication-mutation rate bucket
+  ---
+  duration_ms: 206.709355
+  type: 'test'
+  ...
+{"event":"request_failed","request_id":"49a1a0c8-fb83-418b-b47c-38467f79be84","code":"payment_provider_rejected","route":"/api/checkout"}
+# Subtest: payment initialization outage returns access to the durable pending guest order
+ok 21 - payment initialization outage returns access to the durable pending guest order
+  ---
+  duration_ms: 48.629147
+  type: 'test'
+  ...
+{"event":"request_failed","request_id":"48078809-b012-4dd4-b5b2-a34b6ea6688d","code":"storage_unavailable","route":"/api/downloads"}
+# Subtest: failed file-signing requests restore the reserved download count
+ok 22 - failed file-signing requests restore the reserved download count
+  ---
+  duration_ms: 92.105272
+  type: 'test'
+  ...
+# Subtest: provider email outage preserves accepted submissions and leaves retryable outbox records
+ok 23 - provider email outage preserves accepted submissions and leaves retryable outbox records
+  ---
+  duration_ms: 33.923714
+  type: 'test'
+  ...
+# Subtest: production database adapter redacts unexpected database details
+ok 24 - production database adapter redacts unexpected database details
+  ---
+  duration_ms: 3.048938
+  type: 'test'
+  ...
+# Subtest: rollback removes platform objects while retaining authentication identities
+ok 25 - rollback removes platform objects while retaining authentication identities
+  ---
+  duration_ms: 3648.712166
+  type: 'test'
+  ...
+# Subtest: PostgreSQL data survives a database shutdown and a new process connection
+ok 26 - PostgreSQL data survives a database shutdown and a new process connection
+  ---
+  duration_ms: 6196.134719
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 21411.654583
