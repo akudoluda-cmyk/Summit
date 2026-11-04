@@ -108,10 +108,16 @@ For recovery, verify checksums and inspect the bundle before restoring. A fresh 
 
 The source-only initial commit adds the original 126 uploaded files; the following audit commit adds only `docs/launch/`. Resolve the audit commit with `git rev-parse dev/1751-step01`; its SHA is reported in the final handoff rather than embedded self-referentially in this file. The final `step01-audit.bundle` in the same backup directory additionally preserves this audit branch and its evidence; its checksum is added to `SHA256SUMS`. No remote branch/PR exists. A future implementation branch should start from the reviewed audit commit, in this existing isolated checkout; no extra worktree is needed.
 
+## Confirmed owner decision — Store authority
+
+The owner confirmed that **Selar is the authoritative system for Store payments, sale records and delivery**. The Store remains a 1751 product showcase. Future implementation must treat Selar as the source of truth for these functions; the existing internal Paystack/order/entitlement flow does not satisfy this decision. This confirmation records the target responsibility and does not change application behavior or authorize deployment.
+
+Verified Selar product destinations and supported cart/checkout capabilities remain to be established. Preserve Add to Cart presentation without inventing combined checkout support. This Store decision does not settle the separate Summit free/paid policy.
+
 ## Owner actions and handoff
 
 1. Review this report and `01_ISSUES.md`. Supply the actual Step 02 instructions in this chat; no later-step scope has been invented.
-2. Confirm the no-customer-account/community scope, owner-approved free/paid Summit policy, and verified Selar product destinations/cart compatibility before those features are changed. Provide decisions in chat; never secret values.
+2. Selar authority for Store payments, sale records and delivery is confirmed above. Clarify the account-free Community behavior, approve the free/paid Summit policy, and supply verified Selar product destinations/cart compatibility before those features are changed. The no-customer-account requirement is already part of the approved contract. Provide decisions in chat; never secret values.
 3. Preserve an independent copy of the backup via the workspace file download controls where available. For remote sharing, explicitly authorize pushing the reviewed baseline/tag/development branch to `akudoluda-cmyk/Summit`; no GitHub click is required to finish this local audit, and no PR can be claimed before a push. Historical README download links point elsewhere.
 4. Only for a later authorized staging task, enter credentials in environment settings (not chat/Git/frontend). No Cloudflare or Supabase dashboard action is required for Step 01. Production DNS, payments, database migrations and deployment remain outside scope.
 
