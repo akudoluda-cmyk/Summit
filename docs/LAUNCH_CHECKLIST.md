@@ -32,7 +32,9 @@ Step 02 documentation change.
       production APP_ORIGIN/canonical URLs, staff Auth redirects/cookies and supported provider callbacks later.
       Verify exact allowed origins on transition; do not broaden them to arbitrary sites.
 - [ ] Separate approved staging/production Supabase projects and server keys; real hosted preview.
-- [ ] First verified owner administrator identity, MFA recovery responsibility and role assignments.
+- [x] Owner supplied enquiry and administrator email: **1751edits@gmail.com**.
+- [ ] Verify the designated administrator email, assign approved staff roles and enroll MFA;
+      establish recovery responsibility. The recorded email alone grants no access.
 - [ ] Verified Selar catalogue/product checkout links, seller responsibility, supported delivery,
       receipt/refund workflow and display-price freshness. Selar is the authority for Store payments,
       sale records and delivery; no parallel native Store payment or fulfillment platform.
@@ -41,7 +43,9 @@ Step 02 documentation change.
 - [ ] Admins can choose free or paid Summit registration; paid provider is Selar. Keep paid registration
       disabled/unpublished until authenticated payment verification, idempotent settlement and seat
       reconciliation (including expired holds, failed/late/duplicate payments) are approved and tested.
-- [ ] Verified SMTP/Resend sender, authorized TEAM_INBOX/OPS_INBOX and independent alert destination.
+- [ ] Configure enquiry recipient `TEAM_INBOX` as **1751edits@gmail.com** and verify enquiry delivery.
+- [ ] Verify the outbound SMTP/Resend sender separately; confirm operational-alert routing (`OPS_INBOX`)
+      and independent alert destination. The enquiry/admin address is not proof of sender verification.
 - [ ] Approved real catalogue, prices/currencies matching verified Selar data, licensed demos/delivery assets,
       event dates/speakers and stories. Do not infer current prices or currencies from old fixtures.
 - [ ] Community guest registration uses private Supabase records and the existing MFA-protected admin dashboard:
